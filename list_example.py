@@ -1,4 +1,4 @@
-a = [1,2,3]
-b = [4,5,6]
-a.extend(b)
-print(a)
+x = [1,1,3,4,5]
+#3 in x
+
+print(2 not in x)
