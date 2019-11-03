@@ -2,7 +2,7 @@
 @Author: SaminShi
 @Date: 2019-10-27 17:56:50
 @LastEditors: SaminShi
-@LastEditTime: 2019-10-27 22:46:18
+@LastEditTime: 2019-11-03 17:20:55
 @Description: example
 @Email: shizhimin0406@163.com
 @Company: xxx
@@ -27,14 +27,24 @@
 
 def twoSun(nums, target):
     result = []
-    nums_dict = dict(list(enumerate(nums)))
     for n in nums:
         if target - n in nums:
-            result = (sorted([nums.index(n),nums.index(target-n)]) if nums.index(n) != nums.index(target-n) else [])
-            print(result)
+            if nums.index(n) != nums.index(target-n):
+                result = sorted([nums.index(n),nums.index(target-n)])
+            else:
+                nums_dict = dict(list(enumerate(nums)))  #将数组转换为以数组索引为键，以数组元素为值的哈希表 {0: 2, 1: 7, 2: 11, 3: 15}
+                nums_dict.pop(nums.index(n))
+                for k in nums_dict.keys():
+                    result = (sorted([nums.index(n),k]) if nums_dict[k] == target-n else [])
+                    if result != []:
+                        break
+            
+            #print(result)
+        if result != []:
             break
     return result
 
+print(twoSun([2,5,5,11],10))
 print(twoSun([3,3],6))
 
 
