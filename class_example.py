@@ -1,5 +1,15 @@
+'''
+@Author: SaminShi
+@Date: 2018-04-22 10:46:55
+@LastEditors: SaminShi
+@LastEditTime: 2019-12-01 09:13:58
+@Description: example
+@Email: shizhimin0406@163.com
+@Company: xxx
+@version: 1.0
+'''
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# -*- coding:utf-8 -*-
 # @Date    : 2018-04-22 10:15:44
 # @Author  : Your Name (you@example.org)
 # @Link    : http://example.org
@@ -15,11 +25,11 @@ class Secretive:
 		print("The secret message is:")
 		self.__inaccessible()     #可以在内部访问
 
-	def smeth():
+	def smeth(self):
 		print("This is a static method")
 	smeth = staticmethod(smeth)
 
-	def cmeth(cls):
+	def cmeth(self,cls):
 		print("This is a class method of",cls)
 	cmeth = classmethod(cmeth)
 

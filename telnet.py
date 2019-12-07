@@ -2,7 +2,7 @@
 @Author: SaminShi
 @Date: 2019-10-29 23:12:40
 @LastEditors: SaminShi
-@LastEditTime: 2019-10-29 23:22:55
+@LastEditTime: 2019-11-16 20:48:11
 @Description: example
 @Email: shizhimin0406@163.com
 @Company: xxx
@@ -75,7 +75,7 @@ class Log():
 
 
 if __name__ == "__main__":
-        tn = Telnet("192.168.1.4",23,1024)
+        tn = Telnet("122.51.28.159",23,1024)
         log = Log("c:/LOG","xgl.txt")
         log.mkdir()
         m = tn.telnet()

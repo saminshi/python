@@ -2,7 +2,7 @@
 @Author: SaminShi
 @Date: 2019-10-31 23:21:29
 @LastEditors: SaminShi
-@LastEditTime: 2019-11-02 09:57:31
+@LastEditTime: 2019-11-30 15:58:40
 @Description: example
 @Email: shizhimin0406@163.com
 @Company: xxx
@@ -14,10 +14,11 @@ import threading,time
 
 class MyThread(threading.Thread):
 
-    def __init__(self,func,args=()):
+    def __init__(self,name=None,func=None,args=()):
         super(MyThread,self).__init__()
         self.func = func
         self.args = args
+        self.name = name
 
     def run(self):
         self.result = self.func(*self.args)
@@ -29,14 +30,15 @@ class MyThread(threading.Thread):
             return None
 
 
-def foo(a,b,c):
-    time.sleep(1)
+def foo(a,b,c,t=2):
+    time.sleep(t)
     return a*2,b*2,c*2
 
 st = time.time()
 li = []
 for i in range(4):
-    t = MyThread(foo,args=(i,i+1,i+2))
+    t = MyThread(i,foo,args=(i,i+1,i+2))
+    
     li.append(t)
     t.start()
 

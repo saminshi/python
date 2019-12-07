@@ -2,13 +2,13 @@
 @Author: SaminShi
 @Date: 2019-10-27 16:24:43
 @LastEditors: SaminShi
-@LastEditTime: 2019-10-27 17:54:51
+@LastEditTime: 2019-12-01 09:35:47
 @Description: example
 @Email: shizhimin0406@163.com
 @Company: xxx
 @version: 1.0
 '''
-# -*- coding: utf-8 -*-
+# -*- coding:utf-8 -*-
 
 #学习网址：https://www.runoob.com/w3cnote/python-func-decorators.html
 # ---------------第一步：一切皆对象，将函数赋值给一个变量
