@@ -2,7 +2,7 @@
 @Author: SaminShi
 @Date: 2019-10-27 16:24:43
 @LastEditors: SaminShi
-@LastEditTime: 2019-12-01 09:35:47
+@LastEditTime: 2019-12-08 09:18:19
 @Description: example
 @Email: shizhimin0406@163.com
 @Company: xxx
@@ -95,3 +95,12 @@ doSomethingBeforeHi(hi)
 del hi
 
 
+# ----------------你的第一个装饰器
+from functools import warps
+def a_new_decorator(a_func):
+    @wraps(a_func)
+    def wrapTheFunction():
+        print("I am doing some boring work before executing %s" %a_func.__name__)
+        a_func()
+        print("I am doing some boring work after executing %s" %a_func.__name__)
+    return wrapTheFunction
