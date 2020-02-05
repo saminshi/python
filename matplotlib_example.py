@@ -1,8 +1,8 @@
 '''
 @Author: SaminShi
 @Date: 2019-12-07 17:23:05
-@LastEditors: SaminShi
-@LastEditTime: 2019-12-07 21:07:38
+@LastEditors  : SaminShi
+@LastEditTime : 2020-02-05 11:19:47
 @Description: example
 @Email: shizhimin0406@163.com
 @Company: xxx
@@ -31,8 +31,10 @@ def Show(y):
 	text0 = plt.text(len_y-1,y[-1],str(y[-1]),fontsize = 10)
 	
 	def scroll(event):
+		# print(event.xdata)
 		axtemp=event.inaxes
 		x_min, x_max = axtemp.get_xlim()
+		# x_min = np.round(event.xdata) 
 		fanwei_x = (x_max - x_min) / 10
 		if event.button == 'up':
 			axtemp.set(xlim=(x_min + fanwei_x, x_max - fanwei_x))
@@ -65,7 +67,7 @@ def Show(y):
 
 if __name__ == '__main__':
     listy = []
-    for i in range(50):
+    for i in range(1000):
         listy.append(random.uniform(1.0,250.0))
     print(listy)
     Show(listy)

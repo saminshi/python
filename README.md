@@ -2,7 +2,7 @@
  * @Author: SaminShi
  * @Date: 2019-12-14 13:36:42
  * @LastEditors: SaminShi
- * @LastEditTime: 2019-12-15 09:48:06
+ * @LastEditTime: 2019-12-15 11:57:11
  * @Description: example
  * @Email: shizhimin0406@163.com
  * @Company: xxx
@@ -16,13 +16,6 @@
 # This is for python test project
 # Test Git conflict
 #dadfdfa
-<<<<<<< HEAD
-'''
-@Author: SaminShi
-@Date: 2018-04-22 10:46:55
-@LastEditors: SaminShi
-@LastEditTime: 2019-12-01 09:13:58
-=======
 # this is test for git conflict
 def config
 def config11
@@ -37,13 +30,11 @@ class aaaaaaaaaaaaaa
 @Date: 2019-11-07 20:54:56
 @LastEditors: SaminShi
 @LastEditTime: 2019-12-08 19:29:06
->>>>>>> 9cedf3492dc86f34a7606da32f10dce07320ea67
 @Description: example
 @Email: shizhimin0406@163.com
 @Company: xxx
 @version: 1.0
 '''
-<<<<<<< HEAD
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # @Date    : 2018-04-22 10:15:44
@@ -105,7 +96,6 @@ p.sayName()
 p.classMethod()
 p.sayAgain()
 Person.classMethod()
-=======
 # -*- coding: utf-8 -*-
 
 def command_dict_gereate(frame = 0,slot = 1,pid = 0,ontid = 0,*args,**kwargs):
@@ -146,4 +136,3 @@ command_list = [1,2]
 other_para = {'line_profile_id':2}
 
 print(command_dict_gereate(0,1,2,3,*command_list,**other_para))
->>>>>>> 9cedf3492dc86f34a7606da32f10dce07320ea67
