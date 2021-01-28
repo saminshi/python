@@ -1,10 +1,7 @@
-dict1={'a':1,'b':2,'c':3}
-dict2 =dict1.copy()
-dict2['c']=4
-print(dict1)
-print(dict2)
-dict1.clear()
-print(dict1)
-print(dict2)
-a=dict2.keys()
-print(a)
+a = '192.168.255.255'
+b = a.split('.')
+c = [int(x) for x in a.split('.')][::-1]
+print((c[0]+1)%256)
+print((c[1]+(c[0]+1)//256)%256)
+print((c[2]+(c[1]+(c[0]+1)//256)//256)%256)
+print((c[3]+(c[2]+(c[1]+(c[0]+1)//256)//256)//256)%256)
