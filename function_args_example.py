@@ -1,8 +1,8 @@
 '''
 @Author: SaminShi
 @Date: 2019-10-31 23:21:29
-@LastEditors: SaminShi
-@LastEditTime: 2019-11-02 09:46:17
+LastEditors: Please set LastEditors
+LastEditTime: 2021-03-28 10:09:03
 @Description: example
 @Email: shizhimin0406@163.com
 @Company: xxx
@@ -19,3 +19,14 @@ dict_x = {'b':2}
 
 func(1,*a,**dict_x)
 func(a)
+
+
+def add_end(l = []):
+    l.append('END')
+    return l
+
+
+b=add_end()
+print(b)
+c=add_end()
+print(c)
